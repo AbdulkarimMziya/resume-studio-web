@@ -89,6 +89,15 @@ export default function App() {
     setStatus("Cancelled. Your text is still here");
   }
 
+  /** Logo click: back to step 1, keeping the user's text (no reload). */
+  function goHome() {
+    abortRef.current?.abort();
+    abortRef.current = null;
+    show("resume");
+    setStatus("");
+    window.scrollTo({ top: 0 });
+  }
+
   function updateSection(id: string, body: string) {
     setSections((prev) => prev.map((s) => (s.id === id ? { ...s, body } : s)));
   }
@@ -119,7 +128,17 @@ export default function App() {
   return (
     <>
       <header className="topbar">
-        <a className="brand" href="/">
+        <a
+          className="brand"
+          href={import.meta.env.BASE_URL}
+          aria-label="Resume Studio, start over"
+          onClick={(e) => {
+            // Let cmd/ctrl/shift/middle clicks open a new tab; a plain click stays in the app.
+            if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+            e.preventDefault();
+            goHome();
+          }}
+        >
           <span className="logo" aria-hidden="true">
             r.
           </span>{" "}
