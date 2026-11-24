@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "predeploy": "VITE_USE_MOCK=true npm run build",
+    "predeploy": "VITE_USE_MOCK=false VITE_API_BASE_URL=https://resume-studio-api-vfuy.onrender.com npm run build",
     "deploy": "gh-pages -d dist",
     "test": "vitest run"
   },

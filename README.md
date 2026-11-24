@@ -1,7 +1,7 @@
 # Resume Studio
 **A web app that tailors your existing resume to a specific job posting: AI suggests sharper, role-specific wording, and you decide what goes in. It never invents experience.**
 
-🔗 **[Live Demo](https://abdulkarimmziya.github.io/resume-studio-web/)** (mock mode: sample suggestions, no backend)
+🔗 **[Live Demo](https://abdulkarimmziya.github.io/resume-studio-web/)** (uses the hosted API; the first request can take about a minute while the free Render server wakes up)
 📄 **[Backend / API (Django REST Framework)](https://github.com/AbdulkarimMziya/resume-studio-api)**
 
 <!-- Drop a screenshot or GIF into docs/media/ and keep this file name, or update the path below. -->
@@ -51,7 +51,7 @@ It starts in **mock mode** (sample suggestions, no backend needed). To use the r
 `npm test` runs the tests. `npm run build` and `npm run lint` check types and style.
 
 ### Deploying the live demo
-`npm run deploy` builds in mock mode and publishes `dist/` to the `gh-pages` branch. GitHub Pages serves that branch (Settings → Pages → Source: `gh-pages`).
+`npm run deploy` builds against the hosted API on Render and publishes `dist/` to the `gh-pages` branch. GitHub Pages serves that branch (Settings → Pages → Source: `gh-pages`).
 
 ## 📬 Contact
 **Abdulkarim Mziya** – [LinkedIn](https://linkedin.com/in/abdulkarim-mziya) | [GitHub](https://github.com/AbdulkarimMziya)
