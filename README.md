@@ -4,8 +4,9 @@
 🔗 **[Live Demo](https://abdulkarimmziya.github.io/resume-studio-web/)** (uses the hosted API; the first request can take about a minute while the free Render server wakes up)
 📄 **[Backend / API (Django REST Framework)](https://github.com/AbdulkarimMziya/resume-studio-api)**
 
-<!-- Drop a screenshot or GIF into docs/media/ and keep this file name, or update the path below. -->
-![Resume Studio demo](docs/media/demo.gif)
+[![Resume Studio demo](docs/media/demo.gif)](docs/media/demo.mp4)
+
+▶️ [Watch the full demo video](docs/media/demo.mp4)
 
 ---
 
